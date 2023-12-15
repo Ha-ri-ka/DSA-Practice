@@ -11,6 +11,5 @@ int maxSubArray(int* nums, int numsSize)
         if (tmp < 0)
             tmp = 0;
     }
-
     return max;
 }
