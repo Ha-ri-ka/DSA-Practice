@@ -7,3 +7,4 @@ class Solution(object):
                nums[nextUnique]=nums[i]
                nextUnique+=1
         return nextUnique
+    
