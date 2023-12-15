@@ -13,5 +13,19 @@ class Solution(object):
         temp=list(nums)
         for i in range (n):
             nums[(i+k)%(n)]=temp[i]
-        
-  
+
+    #solution 3: list slicing
+    def rotate(self, nums, k):
+        n=len(nums)
+        flag=True
+        if k > n:
+            k=k-n
+        if k==n or n==0 or n==1 or k==0:
+            flag=False
+        if(flag):
+            if(n==2):
+                nums.reverse()
+            elif(n>2):
+                nums.reverse()
+                nums[:k]=reversed(nums[:k])
+                nums[k:]=reversed(nums[k:])       
