@@ -9,3 +9,12 @@ class Solution(object):
                 break
         if(flag==0): return n 
         return i        
+      
+      #solution 2: O(n)
+        def missingNumber(self, nums):
+            n=len(nums)
+            if(n==0):
+              return n
+            expectedSum=n*(n+1)//2
+            arraySum=sum(nums)
+            return expectedSum-arraySum
