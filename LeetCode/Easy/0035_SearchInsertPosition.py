@@ -1,10 +1,18 @@
 class Solution(object):
-    def searchInsert(self,nums,target):
-        s,e=0,len(nums)-1
-        while s<=e:
-            m=(s+e)//2
-            if nums[m]==target: return m
-            if nums[m]>target: e=m-1
-            elif nums[m]<target: s=m+1
-        if nums[m]<target: return m+1
-        if nums[m]>target: return m
+    def searchInsert(self, nums, target):
+        n=len(nums)
+        start,end=0,n-1
+        while(start<=end):
+            mid=(start+end)//2
+            if target==nums[mid]:
+                return mid
+            if target<nums[mid]:
+                end=mid-1
+            elif target>nums[mid]:
+                start=mid+1
+        # print(nums[mid])
+        if target<nums[mid]:
+            return mid
+        if target>nums[mid]:
+            return mid+1
+        
