@@ -12,7 +12,7 @@ class Solution:
         #         if ans==target:
         #             return [i,j]
 
-        #better---------------------
+        # optimal---------------------
         indicesMap={}
         for i in range(n):
             indicesMap[nums[i]]=i
