@@ -10,7 +10,6 @@ def createTree():
         data=int(input(""))
     except ValueError:
         return
-    # if data==-1:
     newNode.data=data
     print(f"Enter left child of {data}",end=" ")
     newNode.left=createTree()
