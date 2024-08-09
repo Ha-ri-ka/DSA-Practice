@@ -9,4 +9,4 @@ class Solution:
             if total<0:
                 total=0
                 start=i+1
-        return start              
+        return start
